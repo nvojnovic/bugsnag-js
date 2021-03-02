@@ -212,7 +212,7 @@ Scenario: opt not to modify either project
     When I input a return interactively
     And I wait for the current stdout line to match the regex "Do you want to automatically upload JavaScript source maps as part of the Gradle build\?"
     When I input "n" interactively
-    And I wait for the current stdout line to match the regex "\/app #"
+    And I wait for the current stdout line to match the regex "/app #"
     Then the last interactive command exited successfully
     And bugsnag source maps library is not in the package.json file
     And the iOS build has not been modified to upload source maps
